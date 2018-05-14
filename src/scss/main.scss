@@ -1,0 +1,26 @@
+
+@import 'normalize.scss';
+@import 'variable.scss';
+
+body {
+  font-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: lightgray;
+  position: relative;
+  overflow-x: hidden;
+  left: 0;
+  li {
+    list-style: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.wrap {
+  max-width: 75rem;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+

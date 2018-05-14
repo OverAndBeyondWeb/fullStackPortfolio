@@ -2,13 +2,19 @@
   <form id="add-a-project" class="container" action="" method="post">
     <h3>Would you like to add a project?</h3>
     <fieldset>
-      <input v-model.trim="title" ref="title" type="text" tabindex="1" placeholder="Title goes here..." required autofocus>
+      <input v-model.trim="title" type="text" tabindex="1" placeholder="Title goes here..." required autofocus>
     </fieldset>
     <fieldset>
-      <textarea  v-model.trim="description" name="" id="" cols="30" rows="10" tabindex="2" placeholder="describe the project here..." required></textarea>
+      <input v-model.trim="imgUrl" type="url" tabindex="2" placeholder="Site link goes here..." required autofocus>
     </fieldset>
     <fieldset>
-      <button @click.prevent="addProject" name="submit" type="submit" id="add-a-project-submit" data-submit="...Sending">Submit</button>
+      <input v-model.trim="imgUrl" type="url" tabindex="3" placeholder="Image source goes here..." required autofocus>
+    </fieldset>
+    <fieldset>
+      <textarea  v-model.trim="description" name="" id="" cols="30" rows="10" tabindex="4" placeholder="describe the project here..." required></textarea>
+    </fieldset>
+    <fieldset>
+      <button @click.prevent="addProject" name="submit" type="submit" id="add-a-project-submit" data-submit="...Sending">Add Project</button>
     </fieldset>
   </form>
 </template>
@@ -20,17 +26,24 @@
     data() {
       return {
         title: '',
+        link: '',
+        imgUrl: '',
         description: ''
       }
     },
     methods: {
       addProject() {
-
-        console.log(this.title);
         db.ref('projects').push({
           title: this.title,
+          link: this.link,
+          imgUrl: this.imgUrl,
           description: this.description
         });
+
+        this.title = '';
+        this.link = '';
+        this.imgUrl = '';
+        this.description = '';
       }
     }
   }

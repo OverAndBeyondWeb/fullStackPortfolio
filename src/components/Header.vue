@@ -13,15 +13,21 @@
           <li class="navLink"><router-link to="/" exact>HOME</router-link></li>
           <li class="navLink"><router-link :to="{hash: '#projects'}" >PROJECTS</router-link></li>
           <li class="navLink"><router-link to='/contact'>CONTACT</router-link></li>
+          <li class="login-btn" @click="showLoginForm">LOGIN</li>
         </ul>
       </nav>
+      <login-form></login-form>
     </div>
   </header>
 </template>
 
 <script>
+  import LoginForm from './LoginForm.vue';
 
   export default {
+    components: {
+      'login-form': LoginForm
+    },
     data () {
       return {
         developer: 'juan fox',
@@ -53,6 +59,9 @@
           siteNav.classList.add('jjwiz');
         }
 
+      },
+      showLoginForm() {
+        console.log('would you like to login?');
       }
 
     }
@@ -138,11 +147,18 @@
       color: $secondary-color;
     }
 
+    .login-btn {
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
     @media screen and (max-width: 37.5rem){
 
       ul {
         display: inline-block;
-        float: right;
         background: rgba(0, 0, 0, .6);
         z-index: 1000;
         height: 100vh;

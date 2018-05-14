@@ -8,8 +8,9 @@
       <project-four></project-four>
       <project-five></project-five>
       <p v-if="projectRouteActive" class="back-link"><router-link to="/">&larr; Back</router-link></p>
+      <button>Add a Project</button>
+      <add-proj-form></add-proj-form>
     </div>
-
   </div>
 </template>
 
@@ -19,6 +20,7 @@
   import Project3 from './projects/Project3.vue';
   import Project4 from './projects/Project4.vue';
   import Project5 from './projects/Project5.vue';
+  import AddProjForm from './AddProjForm.vue';
 
   export default {
     components: {
@@ -26,7 +28,14 @@
       'project-two': Project2,
       'project-three': Project3,
       'project-four': Project4,
-      'project-five': Project5
+      'project-five': Project5,
+      'add-proj-form': AddProjForm
+    },
+    data() {
+      return {
+        title: 'Title goes here...',
+        description: 'describe the project here...'
+      }
     }
   }
 </script>

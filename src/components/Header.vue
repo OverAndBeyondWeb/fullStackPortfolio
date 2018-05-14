@@ -13,10 +13,10 @@
           <li class="navLink"><router-link to="/" exact>HOME</router-link></li>
           <li class="navLink"><router-link :to="{hash: '#projects'}" >PROJECTS</router-link></li>
           <li class="navLink"><router-link to='/contact'>CONTACT</router-link></li>
-          <li class="login-btn" @click="showLoginForm">LOGIN</li>
+          <li class="login-btn" @click="showForm = true">LOGIN</li>
         </ul>
       </nav>
-      <login-form></login-form>
+      <login-form v-if="showForm"></login-form>
     </div>
   </header>
 </template>
@@ -32,7 +32,8 @@
       return {
         developer: 'juan fox',
         title: 'web developer',
-        current: true
+        current: true,
+        showForm: false
       }
     },
     methods: {

@@ -5,7 +5,7 @@
       <input v-model.trim="title" type="text" tabindex="1" placeholder="Title goes here..." required autofocus>
     </fieldset>
     <fieldset>
-      <input v-model.trim="imgUrl" type="url" tabindex="2" placeholder="Site link goes here..." required autofocus>
+      <input v-model.trim="link" type="url" tabindex="2" placeholder="Site link goes here..." required autofocus>
     </fieldset>
     <fieldset>
       <input v-model.trim="imgUrl" type="url" tabindex="3" placeholder="Image source goes here..." required autofocus>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import { db } from '../firbase';
+  import { projectsRef } from '../firebase';
 
   export default {
     data() {
@@ -33,7 +33,7 @@
     },
     methods: {
       addProject() {
-        db.ref('projects').push({
+        projectsRef.push({
           title: this.title,
           link: this.link,
           imgUrl: this.imgUrl,

@@ -11,6 +11,11 @@
       <button>Add a Project</button>
       <add-proj-form></add-proj-form>
     </div>
+    <div>
+      <ul>
+        <li v-for="project of projects" :key="project['.key']">{{project.title}}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -21,6 +26,7 @@
   import Project4 from './projects/Project4.vue';
   import Project5 from './projects/Project5.vue';
   import AddProjForm from './AddProjForm.vue';
+  import { projectsRef } from '../firebase';
 
   export default {
     components: {
@@ -36,6 +42,9 @@
         title: 'Title goes here...',
         description: 'describe the project here...'
       }
+    },
+    firebase: {
+      projects: projectsRef
     }
   }
 </script>

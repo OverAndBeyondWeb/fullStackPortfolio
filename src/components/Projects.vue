@@ -2,45 +2,48 @@
   <div id="projects" class="projects">
     <div class="projects-container wrap">
       <h1>Projects</h1>
-      <project-one></project-one>
-      <project-two></project-two>
-      <project-three></project-three>
-      <project-four></project-four>
-      <project-five></project-five>
-      <p v-if="projectRouteActive" class="back-link"><router-link to="/">&larr; Back</router-link></p>
-      <button>Add a Project</button>
-      <add-proj-form></add-proj-form>
-    </div>
-    <div>
       <ul>
-        <li v-for="project of projects" :key="project['.key']">{{project.title}}</li>
+        <li v-for="project of projects" :key="project['.key']">
+          <project>
+            <div class="project-content">
+              <h3>{{project.title}}</h3>
+              <p v-html="project.description"></p>
+            </div>
+            <div class="project-link-container">
+              <div class="project-link" style='background: url(/src/img/thumbnail1.jpg)'>
+                <a :href="project.link" target="_blank">
+                  <div class="slide-up-panel panel-1">
+                    <button>
+                      <h4>visit site!</h4>
+                    </button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </project>
+        </li>
       </ul>
-    </div>
+      <!-- <p v-if="projectRouteActive" class="back-link"><router-link to="/">&larr; Back</router-link></p> -->
+      <add-proj-form></add-proj-form>
+    </div> 
   </div>
 </template>
 
 <script>
-  import Project1 from './projects/Project1.vue';
-  import Project2 from './projects/Project2.vue';
-  import Project3 from './projects/Project3.vue';
-  import Project4 from './projects/Project4.vue';
-  import Project5 from './projects/Project5.vue';
+  import Project from './Project.vue';
   import AddProjForm from './AddProjForm.vue';
   import { projectsRef } from '../firebase';
 
   export default {
     components: {
-      'project-one': Project1,
-      'project-two': Project2,
-      'project-three': Project3,
-      'project-four': Project4,
-      'project-five': Project5,
+      'project': Project,
       'add-proj-form': AddProjForm
     },
     data() {
       return {
         title: 'Title goes here...',
-        description: 'describe the project here...'
+        description: 'describe the project here...',
+        url: 'url("../../img/thumbnail1.jpg")'
       }
     },
     firebase: {
@@ -97,6 +100,10 @@
     overflow: hidden;
     height: 200px;
     width: 400px;
+
+    &:hover .panel-1 {
+      transform: translateY(0);
+    }
 
     @media screen and (max-width: 56.25rem) {
       margin-right: 0;

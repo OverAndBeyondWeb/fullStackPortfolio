@@ -3,29 +3,51 @@
     <h3>Let's get some things done!</h3>
     <h4>What do you have in mind?</h4>
     <fieldset>
-      <input placeholder="Your name (required)" type="text" tabindex="1" required autofocus>
+      <input v-model="contact.name" placeholder="Your name (required)" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address (required)" type="email" tabindex="2" required>
+      <input v-model="contact.email" placeholder="Your Email Address (required)" type="email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3">
+      <input v-model="contact.phone" placeholder="Your Phone Number" type="tel" tabindex="3">
     </fieldset>
     <fieldset>
-      <input placeholder="Your Company" type="url" tabindex="4">
+      <input v-model="contact.company" placeholder="Your Company" type="url" tabindex="4">
     </fieldset>
     <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      <textarea v-model="contact.message" placeholder="Type your message here...." tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button @click.prevent="submitContact" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
     <router-link to="/"><p class="back-link">&larr; Back</p></router-link>
   </form>
 </template>
 
 <script>
+  import { contactsRef } from '../firebase';
 
+  export default {
+    data () {
+      return {
+        contact: {
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        }
+      }
+    },
+    methods: {
+      submitContact () {
+        contactsRef.push(this.contact)
+        for (let cat in this.contact) {
+          this.contact[cat] = '';
+        }
+      }
+    }
+  }
 </script>
 
 <style scoped>
@@ -39,7 +61,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 

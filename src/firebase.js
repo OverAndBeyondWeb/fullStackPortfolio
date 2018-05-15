@@ -11,3 +11,4 @@ const app = initializeApp({
 });
 
 export const projectsRef = app.database().ref('projects');
+export const contactsRef = app.database().ref('contacts');

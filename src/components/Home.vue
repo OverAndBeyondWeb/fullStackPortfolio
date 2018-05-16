@@ -51,7 +51,11 @@
       window.addEventListener('scroll', this.handleScroll);
       eventBus.$on('showForm', () => this.showForm = true);
       eventBus.$on('closeForm', () => this.showForm = false);
-      eventBus.$on('userLoggedIn', () => this.loggedIn = true);
+      eventBus.$on('userLoggedIn', () => {
+        this.loggedIn = true;
+        this.showForm = false;
+      });
+      eventBus.$on('userLoggedIn', () => this.loggedIn = false);
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);

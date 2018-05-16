@@ -13,7 +13,7 @@
           <li class="navLink"><router-link to="/" exact>HOME</router-link></li>
           <li class="navLink"><router-link :to="{hash: '#projects'}" >PROJECTS</router-link></li>
           <li class="navLink"><router-link to='/contact'>CONTACT</router-link></li>
-          <li class="login-btn" @click="showLoginForm" ref="loginBtn">LOGIN</li>
+          <li class="login-btn" @click="showLoginForm"  ref="loginBtn">LOGIN</li>
         </ul>
       </nav>
     </div>
@@ -49,7 +49,6 @@
           openNav.classList.remove('hidden');
           siteNav.classList.remove('slide-nav');
           siteNav.classList.remove(siteNav.classList[0]);
-          console.log(siteNav.classList[0]);
         } else {
           openNav.classList.add('hidden');
           siteNav.classList.add('slide-nav');
@@ -58,15 +57,23 @@
 
       },
       showLoginForm() {
-        // console.log('would you like to login?');
-        // this.$refs.loginBtn.innerText = this.$refs.loginBtn.innerText === 'LOGIN' ? 'LOGOUT' : 'LOGIN';
-        // this.showForm = !this.showForm;
-        // console.log('header', this.showForm);
-        eventBus.changeFormState();
+        if(this.$refs.loginBtn.innerText === 'LOGIN') {
+          eventBus.changeFormState();
+        } else {
+          this.logout();
+        } 
+      },
+      logout() {
+        if(this.$refs.loginBtn.innerText === 'LOGOUT') {
+          console.log('logged out');
+          eventBus.logUserOut();
+          this.$refs.loginBtn.innerText = this.$refs.loginBtn.innerText === 'LOGIN' ? 'LOGOUT' : 'LOGIN';
+        }
       }
 
     },
-    created() {
+    mounted() {
+      console.log(this.$refs);
       eventBus.$on('userLoggedIn', () => this.$refs.loginBtn.innerText = this.$refs.loginBtn.innerText === 'LOGIN' ? 'LOGOUT' : 'LOGIN');
     }
   }

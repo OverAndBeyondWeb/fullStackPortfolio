@@ -34,6 +34,9 @@ export const eventBus = new Vue({
     },
     logUserIn() {
       this.$emit('userLoggedIn');
+    },
+    logUserOut() {
+      this.$emit('userLoggedOut');
     }
   }
 });

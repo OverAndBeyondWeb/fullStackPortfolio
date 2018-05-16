@@ -13,7 +13,7 @@
           <li class="navLink"><router-link to="/" exact>HOME</router-link></li>
           <li class="navLink"><router-link :to="{hash: '#projects'}" >PROJECTS</router-link></li>
           <li class="navLink"><router-link to='/contact'>CONTACT</router-link></li>
-          <li class="login-btn" @click="showForm = true">LOGIN</li>
+          <li class="login-btn" @click="showLoginForm" ref="loginBtn">LOGIN</li>
         </ul>
       </nav>
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  
+  import { eventBus } from '../main';
 
   export default {
     data () {
@@ -58,7 +58,11 @@
 
       },
       showLoginForm() {
-        console.log('would you like to login?');
+        // console.log('would you like to login?');
+        // this.$refs.loginBtn.innerText = this.$refs.loginBtn.innerText === 'LOGIN' ? 'LOGOUT' : 'LOGIN';
+        // this.showForm = !this.showForm;
+        // console.log('header', this.showForm);
+        eventBus.changeFormState();
       }
 
     }
@@ -172,7 +176,6 @@
       }
       .fa {
         display: inline-block;
-        float: right;
       }
       .fa-window-close-o {
         position: absolute;

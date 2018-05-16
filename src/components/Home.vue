@@ -1,6 +1,7 @@
 <template>
   <div id="home">
     <login-form v-if="showForm"></login-form>
+    
     <landing-page></landing-page>
     <quote-one></quote-one>
     <skills></skills>
@@ -18,6 +19,7 @@
   import Quote2 from './Quotes/Quote2.vue';
   import Projects from './Projects.vue';
   import Footer from './Footer.vue';
+  import { eventBus } from '../main';
 
   export default {
     name: 'home',
@@ -33,7 +35,8 @@
     data () {
       return {
         scrolled: false,
-        showForm: true
+        showForm: false,
+        loggedIn: false
       };
     },
     methods: {
@@ -46,6 +49,9 @@
     },
     created () {
       window.addEventListener('scroll', this.handleScroll);
+      eventBus.$on('showForm', () => this.showForm = true);
+      eventBus.$on('closeForm', () => this.showForm = false);
+      eventBus.$on('userLoggedIn', () => this.loggedIn = true);
     },
     destroyed () {
       window.removeEventListener('scroll', this.handleScroll);
@@ -54,4 +60,5 @@
 </script>
 
 <style lang="scss">
+  
 </style>

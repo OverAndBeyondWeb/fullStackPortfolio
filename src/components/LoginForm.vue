@@ -1,5 +1,6 @@
 <template>
   <form id="login" class="container">
+    <div class="close-btn" @click="closeForm">X</div>
     <h3>Would you like to login?</h3>
     <fieldset>
       <input v-model="email" placeholder="Your email (required)" type="email" tabindex="1" required autofocus>
@@ -10,13 +11,12 @@
     <fieldset>
       <button @click.prevent="checkCredentials" name="submit" type="submit" id="login-submit" data-submit="...Sending">Submit</button>
     </fieldset>
-    <div v-for="i of admin" :key="i['.key']">{{i}}</div>
-    
   </form>
 </template>
 
 <script>
   import { adminRef } from '../firebase';
+  import { eventBus } from '../main';
 
   export default {
     data() {
@@ -54,8 +54,12 @@
         if (correctEmail && correctPassword) {
           this.loggedIn = true;
           this.loginMessage = 'successful login';
+          eventBus.LogUserIn();
         }
         console.log(this.loginMessage, correctEmail, correctPassword);
+      },
+      closeForm() {
+        eventBus.closeForm();
       }
     }
   }
@@ -72,7 +76,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 

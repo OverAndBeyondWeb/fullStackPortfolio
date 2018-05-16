@@ -23,8 +23,25 @@ const router = new VueRouter({
     }
   }
 });
+
+export const eventBus = new Vue({
+  methods: {
+    changeFormState() {
+      this.$emit('showForm');
+    },
+    closeForm() {
+      this.$emit('closeForm');
+    },
+    logUserIn() {
+      this.$emit('userLoggedIn');
+    }
+  }
+});
+
 new Vue({
   el: '#app',
   router,
   render: h => h(App)
 });
+
+

@@ -16,18 +16,14 @@
           <li class="login-btn" @click="showForm = true">LOGIN</li>
         </ul>
       </nav>
-      <login-form v-if="showForm"></login-form>
     </div>
   </header>
 </template>
 
 <script>
-  import LoginForm from './LoginForm.vue';
+  
 
   export default {
-    components: {
-      'login-form': LoginForm
-    },
     data () {
       return {
         developer: 'juan fox',

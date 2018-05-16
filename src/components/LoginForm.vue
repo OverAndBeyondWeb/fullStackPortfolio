@@ -1,20 +1,64 @@
 <template>
-  <form id="login" class="container" action="" method="post">
+  <form id="login" class="container">
     <h3>Would you like to login?</h3>
     <fieldset>
-      <input placeholder="Your name (required)" type="text" tabindex="1" required autofocus>
+      <input v-model="email" placeholder="Your email (required)" type="email" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="password (required)" type="password" tabindex="2" required>
+      <input v-model="password" placeholder="password (required)" type="password" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="login-submit" data-submit="...Sending">Submit</button>
+      <button @click.prevent="checkCredentials" name="submit" type="submit" id="login-submit" data-submit="...Sending">Submit</button>
     </fieldset>
+    <div v-for="i of admin" :key="i['.key']">{{i}}</div>
+    
   </form>
 </template>
 
 <script>
+  import { adminRef } from '../firebase';
 
+  export default {
+    data() {
+      return {
+        email: '',
+        password: '',
+        loggedIn: false,
+        loginMessage: ''
+      }
+    },
+    firebase: {
+      admin: adminRef
+    },
+    methods: {
+      checkCredentials() {
+
+        let correctEmail = this.admin.some(item => {
+          return item['.key'] === 'email' && item['.value'] === this.email;
+        });
+
+        let correctPassword = this.admin.some(item => {
+          
+          return item['.key'] === 'password' && item['.value'] === +this.password;
+        });
+
+        if (!correctEmail && !this.loginMessage) {
+          this.loginMessage = 'incorrect email';
+          return;
+        }
+
+        if (!correctPassword && !this.loginMessage) {
+          this.loginMessage = 'incorrect password';
+        }
+        
+        if (correctEmail && correctPassword) {
+          this.loggedIn = true;
+          this.loginMessage = 'successful login';
+        }
+        console.log(this.loginMessage, correctEmail, correctPassword);
+      }
+    }
+  }
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <form id="contact" class="container" action="" method="post">
+  <form id="contact" class="container">
     <h3>Let's get some things done!</h3>
     <h4>What do you have in mind?</h4>
     <fieldset>

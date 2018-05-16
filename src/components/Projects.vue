@@ -39,13 +39,6 @@
       'project': Project,
       'add-proj-form': AddProjForm
     },
-    data() {
-      return {
-        title: 'Title goes here...',
-        description: 'describe the project here...',
-        url: 'url("../../img/thumbnail1.jpg")'
-      }
-    },
     firebase: {
       projects: projectsRef
     }

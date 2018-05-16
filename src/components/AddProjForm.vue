@@ -1,5 +1,5 @@
 <template>
-  <form id="add-a-project" class="container" action="" method="post">
+  <form id="add-a-project" class="container">
     <h3>Would you like to add a project?</h3>
     <fieldset>
       <input v-model.trim="title" type="text" tabindex="1" placeholder="Title goes here..." required autofocus>

@@ -65,6 +65,9 @@
         eventBus.changeFormState();
       }
 
+    },
+    created() {
+      eventBus.$on('userLoggedIn', () => this.$refs.loginBtn.innerText = this.$refs.loginBtn.innerText === 'LOGIN' ? 'LOGOUT' : 'LOGIN');
     }
   }
 </script>

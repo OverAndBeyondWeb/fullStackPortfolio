@@ -54,7 +54,7 @@
         if (correctEmail && correctPassword) {
           this.loggedIn = true;
           this.loginMessage = 'successful login';
-          eventBus.LogUserIn();
+          eventBus.logUserIn();
         }
         console.log(this.loginMessage, correctEmail, correctPassword);
       },

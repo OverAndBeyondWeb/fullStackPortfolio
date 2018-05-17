@@ -24,7 +24,7 @@
         </li>
       </ul>
       <!-- <p v-if="projectRouteActive" class="back-link"><router-link to="/">&larr; Back</router-link></p> -->
-      <add-proj-form></add-proj-form>
+      <add-proj-form v-if="loggedIn"></add-proj-form>
     </div> 
   </div>
 </template>
@@ -33,14 +33,24 @@
   import Project from './Project.vue';
   import AddProjForm from './AddProjForm.vue';
   import { projectsRef } from '../firebase';
+  import { eventBus } from '../main';
 
   export default {
+    data() {
+      return {
+        loggedIn: false
+      }
+    },
     components: {
       'project': Project,
       'add-proj-form': AddProjForm
     },
     firebase: {
       projects: projectsRef
+    },
+    created() {
+      eventBus.$on('userLoggedIn', () => this.loggedIn = true);
+      eventBus.$on('userLoggedOut', () => this.loggedIn = false);
     }
   }
 </script>

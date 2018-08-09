@@ -10,7 +10,7 @@
               <p v-html="project.description"></p>
             </div>
             <div class="project-link-container">
-              <div class="project-link" :style="'background: url(/src/img/' + project.imgUrl + ')'">
+              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ')'">
                 <a :href="project.link" target="_blank">
                   <div class="slide-up-panel panel-1">
                     <button>

@@ -35,7 +35,7 @@
 
   .landing-page {
     height: 90vh;
-    background: url("../img/landing-page-bg5.jpg") no-repeat;
+    background: url("/images/landing-page-bg5.jpg") no-repeat;
     background-size: cover;
     color: white;
     text-transform: uppercase;

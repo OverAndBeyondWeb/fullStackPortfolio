@@ -54,7 +54,8 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    port: 3000
+    port: 3000,
+    contentBase: path.join(__dirname, "src")
   },
   performance: {
     hints: false

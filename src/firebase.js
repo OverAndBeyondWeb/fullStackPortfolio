@@ -2,12 +2,12 @@ import { initializeApp} from 'firebase';
 
 
 const app = initializeApp({
-  apiKey: "AIzaSyCbZrD1L9OwmW-SV_dl3-Vl0fkRpIko_sM",
-  authDomain: "portfolio-7e735.firebaseapp.com",
-  databaseURL: "https://portfolio-7e735.firebaseio.com",
-  projectId: "portfolio-7e735",
-  storageBucket: "portfolio-7e735.appspot.com",
-  messagingSenderId: "706108159771"
+  apiKey: "AIzaSyDO9KlcmdJeRqqFIcJP-TBaf4jL7lX-Pps",
+  authDomain: "newportfolio-9056f.firebaseapp.com",
+  databaseURL: "https://newportfolio-9056f.firebaseio.com",
+  projectId: "newportfolio-9056f",
+  storageBucket: "newportfolio-9056f.appspot.com",
+  messagingSenderId: "540444907994"
 });
 
 export const adminRef = app.database().ref('administrator');

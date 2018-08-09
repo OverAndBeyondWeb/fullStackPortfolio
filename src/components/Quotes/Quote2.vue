@@ -14,7 +14,7 @@
     text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
     padding-top: 7%;
     padding-bottom: 7%;
-    background: url("../../img/quote2-bg-color.jpg") no-repeat;
+    background: url("/images/quote2-bg-color.jpg") no-repeat;
     background-size: cover;
     color: white;
 

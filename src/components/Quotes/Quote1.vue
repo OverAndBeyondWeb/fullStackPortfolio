@@ -1,7 +1,7 @@
 <template>
   <div class="quote-1">
     <div class="quote-content wrap">
-      <transition name="rise" appear><p>"I am a Front End Web Developer Specializing in full site Development"</p></transition>
+      <transition name="rise" appear><p>"I am a Full Stack Web Developer Specializing in full site Development"</p></transition>
       <hr>
     </div>
   </div>

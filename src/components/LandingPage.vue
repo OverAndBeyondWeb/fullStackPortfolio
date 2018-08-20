@@ -4,9 +4,9 @@
 
       <div class="page-container wrap">
         <transition name="fade" appear>
-          <h1>front end web developer</h1>
+          <h1>full stack web developer</h1>
         </transition>
-      <p><em>Energetic, passionate, and talented front end web developer,
+      <p><em>Energetic, passionate, and talented full stack web developer,
         with strong JavaScript skills.  <span>Always interested in continued education and
           complete involvement in the constantly evolving field of web development.</span></em></p>
       <transition name="action-button" appear>

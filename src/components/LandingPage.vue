@@ -6,12 +6,10 @@
         <transition name="fade" appear>
           <h1>full stack web developer</h1>
         </transition>
-      <p><em>Energetic, passionate, and talented full stack web developer,
-        with strong JavaScript skills.  <span>Always interested in continued education and
-          complete involvement in the constantly evolving field of web development.</span></em></p>
+      <p><em>Do you have a need for a devloper who just gets it?</em></p>
       <transition name="action-button" appear>
         <router-link to='/contact'>
-          <button class="contact-now">reach out now!</button>
+          <button class="contact-now">Let's Talk Now!</button>
         </router-link>
       </transition>
     </div>
@@ -30,15 +28,16 @@
 
 <style lang="scss">
 
-  $main-color: purple;
+  $main-color: #e46629;
   $secondary-color: lighten($main-color, 20%);
 
   .landing-page {
     height: 90vh;
-    background: url("/images/landing-page-bg5.jpg") no-repeat;
+    background: url("/images/main_photo.jpg") no-repeat;
     background-size: cover;
     color: white;
     text-transform: uppercase;
+    margin-bottom: 20vh;
 
     @media screen and (max-width: 60rem) and (orientation: landscape){
       height: auto;
@@ -51,11 +50,13 @@
     padding-left: 20%;
 
     h1 {
+      font-size: 64px;
       text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
     }
     p {
       display: block;
       width: 80%;
+      font-family: 'Merriweather', serif; 
       line-height: 1.375em;
       text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
     }
@@ -77,34 +78,31 @@
     width: 200px;
     height: 60px;
     margin-top: 20px;
-    border: 2px solid $secondary-color;
-    border-radius: 15px;
-    background-color: rgba(230, 0, 230, 0);
-    color: $secondary-color;
-    text-transform: uppercase;
+    border: 2px solid #F1A500;
+    border-radius: 50%;
+    background-color: rgba(#F1A500, .7);
+    color: #39607d;
+    font-weight: bold;
+    text-transform: capitalize;
     padding: 2% 0;
-    text-shadow: 2px 2px 1px rgba(67, 67, 67, .5),
-        -2px -1px 2px rgba(67, 67, 67, .5);
-    box-shadow: 2px 2px 1px rgba(67, 67, 67, .5),
-    -2px -1px 2px rgba(67, 67, 67, .5);
+    
     transition: all 300ms ease-in-out;
     &:hover {
-      color: white;
-      background-color: rgba(230, 0, 230, 1);
-      text-shadow: 1px 1px 1px rgba(67, 67, 67, .5),
-                      -1px -1px 1px rgba(67, 67, 67, .5);
+      background-color: rgba(#F1A500, .8);
+      text-shadow: 1px 1px  rgba(#7FBBC3, .3),
+                      -1px -1px rgba(#7FBBC3, .3);
     }
   }
   .fade-enter {
     opacity: 0;
   }
   .fade-enter-active {
-    transition: opacity 1s ease-in;
-    animation: bounce-down 2s ease-in-out;
+    transition: opacity 05s ease-in;
+    animation: bounce-down 2.5s ease-in-out;
   }
   @keyframes bounce-down {
     0% {
-      transform: translateY(-150px);
+      transform: translateY(-350px);
     }
     40% {
       transform: translateY(0);
@@ -131,7 +129,10 @@
       transform: translateY(0);
     }
     98% {
-      transform: translateY(-3px);
+      transform: translateY(5px);
+    }
+    99% {
+      transform: translateY(10px);
     }
     100% {
       transform: translateY(0);

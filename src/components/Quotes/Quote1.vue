@@ -1,8 +1,9 @@
 <template>
   <div class="quote-1">
     <div class="quote-content wrap">
-      <transition name="rise" appear><p>"I am a Full Stack Web Developer Specializing in full site Development"</p></transition>
-      <hr>
+      <transition name="rise" appear><p>Energetic, passionate, and talented full stack web developer,
+        with strong JavaScript skills.Always interested in continued education and
+          complete involvement in the constantly evolving field of web development.</p></transition>
     </div>
   </div>
 
@@ -19,13 +20,11 @@
     background: white;
 
     p {
-      font-size: 2.5em;
+      font-size: 1.75em;
       font-weight: bold;
-      text-align: center;
-      text-shadow: 2px 2px 2px rgba(175, 34, 191, .5);
       padding-top: 5%;
-      padding-bottom: 12%;
-      color: #4c4c4c;
+      padding-bottom: 8%;
+      color: #5f7187;
 
       @media screen and (max-width: 30rem){
         font-size: 1.375em;

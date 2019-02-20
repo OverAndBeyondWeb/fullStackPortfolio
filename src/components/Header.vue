@@ -88,17 +88,18 @@
     width: 100%;
   }
   .header-content {
-    text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
+    color: #283b4a;
     padding: 10px 5px;
   }
 
   .branding {
     height: 100%;
     width: 50%;
-    color: white;
     float: left;
     .name {
+      font-family: 'Merriweather', serif;
       font-size: 1.5em;
+      font-weight: bold;
       text-transform: uppercase;
     }
     .position-title {
@@ -133,6 +134,8 @@
       text-align: center;
     }
     .navLink a{
+
+      color: #8d8a91;
 
       &:after {
         content: "";

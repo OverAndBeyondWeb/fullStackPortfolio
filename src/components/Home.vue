@@ -3,7 +3,6 @@
     <login-form v-if="showForm"></login-form>
     
     <landing-page></landing-page>
-    <quote-one></quote-one>
     <skills></skills>
     <quote-two></quote-two>
     <projects></projects>

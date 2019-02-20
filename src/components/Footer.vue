@@ -42,11 +42,12 @@
     display: flex;
     flex-grow: 1;
     a {
-      color: #d827b3;
+      color: #F1A500;
       font-size: 1.5em;
       flex: 0 0 2em;
       &:hover {
-        color: #e600e6;
+        text-shadow: 1px 1px 2px rgba(#F1A500, .3),
+          -1px -1px 2px rgba(#F1A500, .3);
       }
     }
   }

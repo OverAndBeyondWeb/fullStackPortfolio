@@ -94,6 +94,10 @@
     position: absolute;
   }
 
+  .close-btn {
+    cursor: pointer;
+  }
+
   #login input[type="text"],
   #login input[type="password"],
   #login input[type="tel"],

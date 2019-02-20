@@ -1,11 +1,12 @@
 
 @import 'normalize.scss';
 @import 'variable.scss';
-
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 body {
   font-size: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: lightgray;
+  font-family: 'Poppins', sans-serif;
   position: relative;
   overflow-x: hidden;
   left: 0;

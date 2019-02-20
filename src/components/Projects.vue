@@ -57,14 +57,14 @@
 
 <style lang="scss">
   .projects {
-    background: white;
-    color: #d827b3;
+    background: lighten(#CFC6BA, 20%);
+    color: #283b4a;
     text-align: center;
+    margin-top: 200px;
     padding-bottom: 20%;
     h1 {
       font-size: 3em;
-      text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
-      margin-bottom: 10%;
+      margin: 10% 0 5%;
 
       @media screen and (max-width: 30rem){
         font-size: 2em;
@@ -72,11 +72,16 @@
     }
   }
   .project {
-    color: #4c4c4c;
     display: flex;
-    margin-bottom: 50px;
+    width: 75%;
+    margin: 0 auto 50px;
     padding-bottom: 25px;
     border-bottom: 2px dotted #4c4c4c;
+
+    h3 {
+      color: #39607d;
+      font-size: 1.75em;
+    }
 
     @media screen and (max-width: 56.25rem) {
       flex-direction: column-reverse;
@@ -84,14 +89,14 @@
   }
   .project-content {
     flex: 1 1 60%;
+    color: #283b4a;
     text-align: left;
     padding-right: 8.33333%;
 
     a {
-      color: #d827b3;
+      color: #1C96C3;
 
       &:hover {
-        color: #e600e6;
         text-decoration: underline;
       }
     }
@@ -128,10 +133,10 @@
     button {
       width: 45%;
       height: 25%;
-      border: 2px solid #e600e6;
+      border: 2px solid #F1A500;
       border-radius: 15px;
       background-color: transparent;
-      color: #e600e6;
+      color: #F1A500;
       text-transform: uppercase;
       margin-top: 75px;
     }

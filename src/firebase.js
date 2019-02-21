@@ -1,4 +1,5 @@
-import { initializeApp} from 'firebase';
+import 'firebase/database';
+import { initializeApp } from 'firebase';
 import firebaseAPIKey from '../firebaseKey';
 
 

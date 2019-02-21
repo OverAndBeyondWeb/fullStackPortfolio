@@ -10,7 +10,7 @@
               <p v-html="project.description"></p>
             </div>
             <div class="project-link-container">
-              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ')'">
+              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ') center center'">
                 <a :href="project.link" target="_blank">
                   <div class="slide-up-panel panel-1">
                     <button>
@@ -117,9 +117,14 @@
       margin-right: 0;
     }
 
-    @media screen and (max-width: 27.5rem) {
-      width: 100%;
+    @media screen and (max-width: 650px) {
       max-height: 200px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 27.5rem) {
+      max-height: 150px;
+      //background-size: contain;
     }
   }
 

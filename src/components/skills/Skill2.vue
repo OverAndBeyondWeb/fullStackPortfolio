@@ -10,10 +10,7 @@
         <strong>Clear Communication</strong> 
       </h3>
       <p>
-        JavaScript is a
-        big part of what I do. There is no substitute for understanding the
-        quirks and unintuitive behavior of the core language, but libraries like
-        JQuery can add a great deal of value to some projects.
+        I cater my delivery to the specific audience that needs to receive information at the time. Whether technical or non-technical, I convey key information and give the right details, leaving everyone with a confident feeling that we are all on the same page. 
       </p>
     </div>
   </div>

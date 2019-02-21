@@ -5,9 +5,7 @@
       <h3>
         <strong>Speedy Development</strong> 
       </h3>  
-      <p>Expert knowledge of Adobe Photoshop, HTML5, and CSS3
-        allows me to translate any design, whether psd or jpeg file,
-        into a perfect representation on the web.
+      <p>I won't waste your time. My work ethic won't allow me to miss deadlines. I am committed to using my own time to work through issues that could otherwise throw a project off schedule.
       </p>
     </div>
   </div>

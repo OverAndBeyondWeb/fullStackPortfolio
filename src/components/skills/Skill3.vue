@@ -8,9 +8,7 @@
         <strong>Full Stack Development</strong> 
       </h3>
       <p>
-        The ability to read and understand documentation has allowed me to use frameworks
-        and libraries to speed up development. Git version control, along with Gulp or Webpack,
-        is an essential part of my workflow.
+        With 5+ years on the front end and 2+ years studying backend development, I understand web development as a whole. I understand how code is handled in different browsers, ajax requests, asynchronous code, server to database communication, API development, and much more.
       </p>
     </div>
   </div>

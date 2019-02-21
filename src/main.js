@@ -3,10 +3,9 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import {routes} from "./routes";
 import './firebase';
-import VueFire from 'vuefire'
+import VueFire from 'vuefire';
 
-import 'normalize.css'
-import './scss/main.scss'
+import 'normalize.css';
 
 Vue.use(VueFire);
 Vue.use(VueRouter);

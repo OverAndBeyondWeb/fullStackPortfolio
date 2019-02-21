@@ -8,9 +8,7 @@
         <strong>Life Learner</strong> 
       </h3>
       <p>
-        The ability to read and understand documentation has allowed me to use frameworks
-        and libraries to speed up development. Git version control, along with Gulp or Webpack,
-        is an essential part of my workflow.
+        The ability to read and understand documentation has allowed me to use many frameworks and libraries. I have used React.js, Vue.js, and Angular for javascript development, and I have used Bootstrap, Semantic UI, and Materialize for CSS, just to name a few.
       </p>
     </div>
   </div>

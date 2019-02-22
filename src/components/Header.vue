@@ -115,6 +115,7 @@
       }
     }
   }
+
   .page-nav {
     width: 50%;
     height: 100%;
@@ -122,6 +123,7 @@
 
     .fa {
       display: none;
+      float: right;
     }
     ul {
       margin: 0;
@@ -136,6 +138,10 @@
     .navLink a{
 
       color: #8d8a91;
+
+      &:hover {
+        color: #A7CBDD;
+      }
 
       &:after {
         content: "";
@@ -153,18 +159,18 @@
       &:hover:after {
         visibility: visible;
         transform: scaleX(1);
-        color: $secondary-color;
+        color: #A7CBDD;
       }
     }
     .router-link-active {
-      color: $secondary-color;
+      color: #A7CBDD;
     }
 
     .login-btn {
       cursor: pointer;
 
       &:hover {
-        color: $secondary-color;
+        color: #A7CBDD;
       }
     }
 

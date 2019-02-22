@@ -74,7 +74,7 @@
   }
 
   .container {
-    width: 400px;
+    width: 350px;
     margin: 150px auto;
     position: relative;
   }
@@ -149,7 +149,7 @@
     cursor: pointer;
     width: 100%;
     border: none;
-    background: #d827b3;
+    background: #283b4a;
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
@@ -157,7 +157,7 @@
   }
 
   #contact button[type="submit"]:hover {
-    background: #e600e6;
+    background: lighten(#283b4a, 20%);
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
@@ -199,7 +199,7 @@
   }
 
   .back-link:hover {
-    color: #d827b3;
+    color: #283b4a;
     font-weight: bold
   }
 </style>

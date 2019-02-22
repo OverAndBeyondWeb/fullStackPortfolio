@@ -35,6 +35,7 @@
   }
   .skills-container {
     display: flex;
+    
     @media screen and (max-width: 42.94rem){
       flex-direction: column;
     }

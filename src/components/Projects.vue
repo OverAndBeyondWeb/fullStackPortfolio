@@ -6,7 +6,9 @@
         <li v-for="project of projects" :key="project['.key']">
           <project>
             <div class="project-content">
-              <h3>{{project.title}}</h3>
+              <a :href="project.link" target="_blank">
+                <h3>{{project.title}}</h3>
+              </a>
               <p v-html="project.description"></p>
             </div>
             <div class="project-link-container">
@@ -92,6 +94,10 @@
     color: #283b4a;
     text-align: left;
     padding-right: 8.33333%;
+
+    p {
+      line-height: 1.5;
+    }
 
     a {
       color: #1C96C3;

@@ -12,7 +12,7 @@
               <p v-html="project.description"></p>
             </div>
             <div class="project-link-container">
-              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ') center center'">
+              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ') center center;background-size:100% 100%'">
                 <a :href="project.link" target="_blank">
                   <div class="slide-up-panel panel-1">
                     <button>
@@ -64,6 +64,7 @@
     text-align: center;
     margin-top: 200px;
     padding-bottom: 20%;
+    
     h1 {
       font-size: 3em;
       margin: 10% 0 5%;
@@ -115,6 +116,10 @@
     height: 200px;
     width: 400px;
 
+    &:hover {
+      filter:blur(1px);
+    }
+
     &:hover .panel-1 {
       transform: translateY(0);
     }
@@ -137,13 +142,12 @@
   .slide-up-panel {
     height: 100%;
     width: 100%;
-    background-color: rgba(76, 76, 76, .9);
+    background: transparent;
     padding: 0;
     transform: translateY(200px);
     transition: transform 1s cubic-bezier(0.04, 1.03, 0.58, 1);
     button {
-      width: 45%;
-      height: 25%;
+      
       border: 2px solid #F1A500;
       border-radius: 15px;
       background-color: transparent;

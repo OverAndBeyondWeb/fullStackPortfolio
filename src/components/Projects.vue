@@ -11,17 +11,17 @@
               </a>
               <p v-html="project.description"></p>
             </div>
-            <div class="project-link-container">
-              <div class="project-link" :style="'background: url(/images/' + project.imgUrl + ') center center;background-size:100% 100%'">
-                <a :href="project.link" target="_blank">
-                  <div class="slide-up-panel panel-1">
-                    <button>
-                      <h4>visit site!</h4>
-                    </button>
-                  </div>
-                </a>
+            <a class="project-link" :href="project.link" target="_blank">
+              <div class="slide-up-panel panel-1">
+                <button>
+                  visit site!
+                </button>
               </div>
-            </div>
+              <div
+                class="project-image" 
+                :style="'background: url(/images/' + project.imgUrl + ') center center;background-size:100% 100%'">
+              </div>
+            </a>
           </project>
         </li>
       </ul>
@@ -111,18 +111,12 @@
       padding-right: 0;
     }
   }
+
   .project-link {
-    overflow: hidden;
+    display: inline-block;
     height: 200px;
     width: 400px;
-
-    &:hover {
-      filter:blur(1px);
-    }
-
-    &:hover .panel-1 {
-      transform: translateY(0);
-    }
+    position: relative;
 
     @media screen and (max-width: 56.25rem) {
       margin-right: 0;
@@ -135,26 +129,48 @@
 
     @media screen and (max-width: 27.5rem) {
       max-height: 150px;
-      //background-size: contain;
     }
   }
 
   .slide-up-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
-    background: transparent;
-    padding: 0;
-    transform: translateY(200px);
-    transition: transform 1s cubic-bezier(0.04, 1.03, 0.58, 1);
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 5;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover + .project-image {
+      filter:blur(1px);
+    }
+
     button {
-      
       border: 2px solid #F1A500;
       border-radius: 15px;
       background-color: transparent;
       color: #F1A500;
       text-transform: uppercase;
-      margin-top: 75px;
+      padding: 7px 10px;
     }
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: filter .3s;
   }
 
 </style>

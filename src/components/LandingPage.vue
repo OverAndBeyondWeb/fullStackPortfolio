@@ -36,7 +36,6 @@
     background: url("/images/main_photo.jpg") no-repeat;
     background-size: cover;
     color: white;
-    text-transform: uppercase;
     margin-bottom: 20vh;
 
     @media screen and (max-width: 60rem) and (orientation: landscape){
@@ -52,13 +51,16 @@
     h1 {
       font-size: 64px;
       text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
+      text-transform: uppercase;
     }
+
     p {
       display: block;
       width: 80%;
       font-family: 'Merriweather', serif; 
       line-height: 1.375em;
       text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
+      text-transform: capitalize;
     }
 
     @media screen and (max-width: 30rem) {
@@ -97,42 +99,33 @@
     opacity: 0;
   }
   .fade-enter-active {
-    transition: opacity 05s ease-in;
-    animation: bounce-down 2.5s ease-in-out;
+    transition: opacity .5s ease-in;
+    animation: bounce-down 2s ease-in-out;
   }
   @keyframes bounce-down {
     0% {
       transform: translateY(-350px);
     }
-    40% {
-      transform: translateY(0);
-    }
-    45% {
-      transform: translateY(-40);
-    }
     50% {
-      transform: translateY(-50px);
+      transform: translateY(0);
     }
     60% {
+      transform: translateY(-40px);
+    }
+    69% {
       transform: translateY(0);
     }
-    70% {
+    78% {
       transform: translateY(-20px);
     }
-    80% {
+    86% {
       transform: translateY(0);
     }
-    90% {
-      transform: translateY(-10px);
-    }
-    95% {
-      transform: translateY(0);
+    93% {
+      transform: translateY(-5px);
     }
     98% {
-      transform: translateY(5px);
-    }
-    99% {
-      transform: translateY(10px);
+      transform: translateY(1px);
     }
     100% {
       transform: translateY(0);

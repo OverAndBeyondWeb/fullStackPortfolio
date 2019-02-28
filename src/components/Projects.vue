@@ -66,6 +66,11 @@
     border-top-right-radius: 300px;
     position: relative;
 
+    @media screen and (max-width: 64.25rem) {
+      border-top-right-radius: 200px;
+      top: -220px;
+    }
+
     h1 {
       width: 75%;
       font-family: 'Merriweather', sans-serif;
@@ -83,6 +88,7 @@
       padding: 0;
     }
   }
+
   .project {
     display: flex;
     width: 75%;
@@ -99,6 +105,7 @@
       flex-direction: column-reverse;
     }
   }
+
   .project-content {
     flex: 1 1 60%;
     color: #283b4a;

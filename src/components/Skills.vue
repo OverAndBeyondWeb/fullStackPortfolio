@@ -44,6 +44,11 @@
     flex-grow: 1;
     flex-basis: 30%;
     text-align: center;
+
+    @media screen and (max-width: 64.25rem) {
+      margin-bottom: 70px;
+    }
+
   }
   .skill-content {
     padding: 0 10%;

@@ -15,6 +15,10 @@
 <style lang="scss">
   .quote-container {
     height: 100px;
+
+    @media screen and (max-width: 64.25rem) {
+      height: 200px;
+    }
   }
   .quote-two {
     text-align: center;
@@ -24,10 +28,14 @@
     color: white;
     padding: 75px 0;
 
+    @media screen and (max-width: 64.25rem) {
+      padding: 20px 0;
+    }
+
     p {
       font-size: 2em;
 
-      @media screen and (max-width: 30rem){
+      @media screen and (max-width: 64.25rem){
         font-size: 1.375rem;
       }
     }
@@ -43,6 +51,10 @@
     height: 600px;
     border-top-right-radius: 300px;
     position: relative;
-    top: -370px;   
+    top: -370px;  
+
+    @media screen and (max-width: 64.25rem) {
+      border-top-right-radius: 200px;
+    } 
   }
 </style>

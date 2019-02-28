@@ -52,6 +52,7 @@
       font-size: 64px;
       text-shadow: 2px 2px 2px rgba(67, 67, 67, .5);
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
     p {

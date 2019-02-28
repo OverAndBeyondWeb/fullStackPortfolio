@@ -61,17 +61,23 @@
   .projects {
     background: lighten(#CFC6BA, 20%);
     color: #283b4a;
-    text-align: center;
     margin-top: 200px;
     padding-bottom: 20%;
-    
+    border-top-right-radius: 300px;
+    position: relative;
+
     h1 {
+      width: 75%;
       font-size: 3em;
-      margin: 10% 0 5%;
+      margin: 10% auto 5%;
 
       @media screen and (max-width: 30rem){
         font-size: 2em;
       }
+    }
+
+    ul {
+      padding: 0;
     }
   }
   .project {

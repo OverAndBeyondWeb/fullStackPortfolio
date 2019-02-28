@@ -12,7 +12,7 @@
               <p v-html="project.description"></p>
             </div>
             <a class="project-link" :href="project.link" target="_blank">
-              <div class="slide-up-panel panel-1">
+              <div class="image-link panel-1">
                 <button>
                   visit site!
                 </button>
@@ -60,7 +60,7 @@
 <style lang="scss">
   .projects {
     background: lighten(#CFC6BA, 20%);
-    color: #283b4a;
+    color: rgba(#283b4a, .7);
     margin-top: 200px;
     padding-bottom: 20%;
     border-top-right-radius: 300px;
@@ -68,8 +68,11 @@
 
     h1 {
       width: 75%;
+      font-family: 'Merriweather', sans-serif;
+      text-shadow: 1px 1px 2px rgba(#39607d, .5);
       font-size: 3em;
       margin: 10% auto 5%;
+      text-transform: uppercase;
 
       @media screen and (max-width: 30rem){
         font-size: 2em;
@@ -138,7 +141,7 @@
     }
   }
 
-  .slide-up-panel {
+  .image-link {
     display: flex;
     justify-content: center;
     align-items: center;

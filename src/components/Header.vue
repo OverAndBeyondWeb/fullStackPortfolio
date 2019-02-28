@@ -10,7 +10,7 @@
 
         <ul id="site-nav" @click="showHideNav">
           <i id="close-nav" class="fa fa-window-close-o" aria-hidden="true"></i>
-          <li class="navLink"><router-link to="/" exact>HOME</router-link></li>
+          <li class="navLink current"><router-link to="/" exact>HOME</router-link></li>
           <li class="navLink"><router-link :to="{hash: '#projects'}" >PROJECTS</router-link></li>
           <li class="navLink"><router-link to='/contact'>CONTACT</router-link></li>
           <li class="login-btn" @click="showLoginForm"  ref="loginBtn">LOGIN</li>
@@ -96,16 +96,19 @@
     height: 100%;
     width: 50%;
     float: left;
+
     .name {
       font-family: 'Merriweather', serif;
       font-size: 1.5em;
       font-weight: bold;
       text-transform: uppercase;
     }
+
     .position-title {
       font-size: 1em;
       text-transform: uppercase;
     }
+
     @media screen and (max-width: 30rem){
       .name {
         font-size: 1.125em;
@@ -114,6 +117,7 @@
         font-size: .75em;
       }
     }
+
   }
 
   .page-nav {
@@ -125,19 +129,25 @@
       display: none;
       float: right;
     }
+
     ul {
       margin: 0;
       padding: 15px 0 0 0;
       display: flex;
       white-space: nowrap;
     }
+
     li {
       flex-grow: 1;
       text-align: center;
     }
-    .navLink a{
 
-      color: #8d8a91;
+    .navLink a{
+      color: #283b4a;
+
+      &.router-link-active {
+      color: #7CB9C0;
+    }
 
       &:hover {
         color: #A7CBDD;
@@ -162,6 +172,7 @@
         color: #A7CBDD;
       }
     }
+
     .router-link-active {
       color: #A7CBDD;
     }
